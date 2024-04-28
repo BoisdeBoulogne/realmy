@@ -54,7 +54,7 @@ public class ListenEventswithgui {
             int r = 0;
             for (int i= 0;i<60;i+=4){
 
-                r = (int) (Math.random()*50+1);
+                r += (int) (Math.random()*50+1);
                 track.add(MakeE(144,1,r,100,i));
                 track.add(MakeE(176,1,127,0,i));
                 track.add(MakeE(128,1,r,100,i+2));
@@ -73,7 +73,7 @@ public class ListenEventswithgui {
             a.setMessage(comd, chan, one, two);
             curr = new MidiEvent(a, tick);
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
         return curr;
     }
