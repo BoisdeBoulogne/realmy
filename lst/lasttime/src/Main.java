@@ -1,15 +1,14 @@
 import javax.sound.midi.*;
-
 public class Main {
-    public static void main (String [] args){
-        Main Test = new Main();
+    public static void main (String[] args){
+        Main test = new Main();
         if (args.length<2){
             System.out.println("Do not forget the instrument and nete args!");
         }
         else {
             int instrument = Integer.parseInt(args[0]);
             int note = Integer.parseInt(args[1]);
-            Test.play(instrument,note);
+            test.play(instrument,note);
         }
     }
     public void play (int instrument,int note){
